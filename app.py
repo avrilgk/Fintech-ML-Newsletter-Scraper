@@ -60,7 +60,6 @@ if st.session_state.password == "fintechml":
         options = get_options(edited_df)
         st.write(f'selected **{len(options)}** articles')
         st.info('Table is editable', icon="ℹ️")
-        st.warning('Headlines truecasing for CoinDesk and Blockchain News may not be hundred percent accurate', icon="⚠️")
         top_1_headline = st.selectbox('Choose 1st top headline', options)
         top_2_headline = st.selectbox('Choose 2nd top headline', options)
         
