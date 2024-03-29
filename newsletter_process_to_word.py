@@ -1,9 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Tue Mar 12 14:34:10 2024
-
-@author: SJ
-"""
 
 import docx
 from docx import Document

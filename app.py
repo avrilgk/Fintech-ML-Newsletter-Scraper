@@ -1,5 +1,5 @@
 import streamlit as st
-from crypto_web_scraping import *
+from web_scraping import *
 from newsletter_process_to_word import *
 from io import BytesIO
 import datetime
