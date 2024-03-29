@@ -69,7 +69,7 @@ if st.session_state.password == "fintechml":
         else:
             # Display the selected options if they are different
             st.success(f'You selected "{top_1_headline}" and "{top_2_headline}".')
-        
+ 
     st.title("Step 2: Generate Newsletter")
     newsletter_doc_title = st.text_input("Enter title for newsletter document")
     cleaned_edited_df = get_cleaned_edited_df(edited_df,top_1_headline, top_2_headline)

@@ -196,11 +196,12 @@ def rss_scraper(omit):
         df = pd.DataFrame(arr_of_obj)
         news_df = pd.concat([news_df, df])
     news_df = news_df[news_df['description'].str.len() > 25]
-    return news_df.reset_index(drop=True).drop_duplicates(subset='title')
+    return news_df.drop_duplicates(subset='title').reset_index(drop=True)
         
 def generate_curated_news(curr_date_str, earliest_date_str=None, omit=[]):
     df = rss_scraper(omit)
     if earliest_date_str is not None:
         df = df[df['pub_date']>=datetime.strptime(earliest_date_str, "%d %b %Y").date()]
     df = df.sort_values('title').reset_index(drop=True)
+    print(f"generated {len(df)} articles")
     return df, curr_date_str
